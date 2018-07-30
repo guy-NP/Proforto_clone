@@ -69,7 +69,7 @@ STAG|https://staging.proforto.nl/|GTM-5QF7ZG
 For more information about installing the Google Tag Manager snippet, visit the [GTM Quick Start Guide](https://developers.google.com/tag-manager/quickstart).
 
 ### 6. data layer object (dataLayer) syntax and format
-The folder [DataLayer snippets](https://github.com/ClickValue/Proforto_SDR/tree/proforto/dataLayer_snippets) contains all relevant snippets to make sure the dataLayer structure is correct and according to Google documentation.
+The folder [DataLayer snippets](https://github.com/ClickValue/Proforto_SDR/tree/master/dataLayer_snippets) contains all relevant snippets to make sure the dataLayer structure is correct and according to Google documentation.
 
 #### 6.1 Page information
 The page information snippets contains the dataLayer structure relevant to all page-related information, such as page type and other page specific attributes. It also contains other page relevant information such as forms or filters that are applicable. 
