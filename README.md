@@ -20,7 +20,7 @@ Pick a time and date to discuss this Handover package with developers and projec
 In the hand-over moment make sure this branch is complete and contains all the documents. 
 
 ### 3. Solution Design Reference (SDR) containing both requirements and data logic and conventions (SDR-GA-GTM-PROFORTO.xlsx).
-Please follow the link to the [SDR-[PROFORTO].xlsx](../blob/Analytics-SDR-GA-GTM-PROFORTO.xlsx) This document contains an overview of the elements that should be part of the data layer object. 
+Please follow the link to the [SDR-[PROFORTO].xlsx](../Analytics-SDR-GA-GTM-PROFORTO.xlsx) This document contains an overview of the elements that should be part of the data layer object. 
 The first tab (requirements) details the requirements as discussed with the client (non-technical)
 The second tab (Data layer object) of the SDR shows an overview of all name/value-pairs (objects and arrays) irrespective of the type of event or type of page. 
 The third tab (digital touchpoints) grids __when__ specific elements of the data layer should be available (e.g. a confirmation page results in different populated variables then a product listing page). When necessary a visual reference is shown for more information on when and what data should be available. 
