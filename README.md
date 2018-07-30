@@ -20,14 +20,14 @@ Pick a time and date to discuss this Handover package with developers and projec
 In the hand-over moment make sure this branch is complete and contains all the documents. 
 
 ### 3. Solution Design Reference (SDR) containing both requirements and data logic and conventions (SDR-GA-GTM-PROFORTO.xlsx).
-Please follow the link to the [SDR-[PROFORTO].xlsx](../Analytics-SDR-GA-GTM-PROFORTO.xlsx) This document contains an overview of the elements that should be part of the data layer object. 
+Please follow the link to the [SDR-[PROFORTO].xlsx](../master/Analytics-SDR-GA-GTM-PROFORTO.xlsx) This document contains an overview of the elements that should be part of the data layer object. 
 The first tab (requirements) details the requirements as discussed with the client (non-technical)
 The second tab (Data layer object) of the SDR shows an overview of all name/value-pairs (objects and arrays) irrespective of the type of event or type of page. 
 The third tab (digital touchpoints) grids __when__ specific elements of the data layer should be available (e.g. a confirmation page results in different populated variables then a product listing page). When necessary a visual reference is shown for more information on when and what data should be available. 
 A fourth tab lists the different events object values that typically needs a more elaborate naming convention. 
 
 ### 4. Visual Reference 
-Please follow the link to the [VisualRef-proforto.pdf](../proforto/VisualRef-proforto.pdf) This PDF contains references to special touchpoint that need clarification on what elements and values to expect in the data layer object.
+Please follow the link to the [VisualRef-proforto.pdf](../master/VisualRef-proforto.pdf) This PDF contains references to special touchpoint that need clarification on what elements and values to expect in the data layer object.
 
 ### 5. Installing GTM JavaScript snippet and initial dataLayer set up
 Before the GTM-container is loaded, set up the dataLayer-variable with an initial load:
@@ -69,7 +69,7 @@ STAG|https://staging.proforto.nl/|GTM-5QF7ZG
 For more information about installing the Google Tag Manager snippet, visit the [GTM Quick Start Guide](https://developers.google.com/tag-manager/quickstart).
 
 ### 6. data layer object (dataLayer) syntax and format
-The folder [DataLayer snippets](https://github.com/ClickValue/DeveloperHandoverPackage_GA_GTM/tree/proforto/dataLayer_snippets) contains all relevant snippets to make sure the dataLayer structure is correct and according to Google documentation.
+The folder [DataLayer snippets](https://github.com/ClickValue/Proforto_SDR/tree/proforto/dataLayer_snippets) contains all relevant snippets to make sure the dataLayer structure is correct and according to Google documentation.
 
 #### 6.1 Page information
 The page information snippets contains the dataLayer structure relevant to all page-related information, such as page type and other page specific attributes. It also contains other page relevant information such as forms or filters that are applicable. 
