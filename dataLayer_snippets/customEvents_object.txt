@@ -1,0 +1,11 @@
+/* [1] Snippet for custom events */
+
+
+dataLayer.push({
+	'events': {
+			'category':'',
+			'action':'',
+			'label':''
+	},
+	'event':''
+});

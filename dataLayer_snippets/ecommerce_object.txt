@@ -1,0 +1,341 @@
+
+/**Content
+[1] Capture transaction informatio
+[2] Capture checkout information
+ [2.1] Checkout steps
+ [2.2] checkout options
+[3] Capture Cart interaction information
+ [3.1] Add to cart
+ [3.2] remove from cart
+[4] Capture product detail view information
+[5] Capture impression information
+[6] Capture product click information
+[7] Capture promotion information
+ [7.1] promo view
+ [7.2] promo click
+[8] custom ecommerce action: quote
+*/
+
+/* [1] Capture transaction information */
+<script>
+dataLayer.push({
+	'ecommerce': {
+		'purchase': {
+			'actionField': {
+				'id': '',
+				'affiliation': '',
+				'revenue': '',
+				'tax': '',
+				'shipping': '',
+				'coupon': ''
+			},
+				'products': [{
+					'name': '',
+					'id': '',
+					'price': '',
+					'brand': '',
+					'category': '',
+					'variant': '',
+					'quantity': 1,
+					'print':'',
+					'size':''
+					},
+					{
+					'name': '',
+					'id': '',
+					'price': '',
+					'brand': '',
+					'category': '',
+					'variant': '',
+					'quantity': 1,
+					'print':'',
+					'size':''
+				}]
+		}
+	},
+	'events': {
+			'category':'ecommerce',
+			'action':'purchase'
+	},
+	'event':'eecPurchase'
+});
+</script>
+
+/* [2] Capture checkout information */
+/* [2.1] default:checkout steps */
+<script>
+dataLayer.push({
+    'ecommerce': {
+        'checkout': {
+            'actionField': {
+				'step': 1, 
+				'option':''
+				},
+            'products': [{
+				'name': '', 
+				'id': '',
+				'price': '',
+				'brand': '', 
+				'category': '',
+				'variant': '',
+				'quantity': 1
+                },
+                {
+				'name': '',
+				'id': '',
+				'price': '',
+				'brand': '',
+				'category': '',
+				'variant': '',
+				'quantity': 1           
+			}]
+        },
+	},
+	'events': {
+		'category':'ecommerce',
+		'action':'checkoutStep'
+	},
+	'event':'eecCheckout'			
+});
+</script>
+
+/* [2.2] extra:checkout options*/
+<script>
+dataLayer.push({
+    'ecommerce': {
+      'checkout_option': {
+        'actionField': {
+			'step': '' , 
+			'option': ''
+		}
+      }
+    },
+	'events': {
+		'category':'ecommerce',
+		'action':'checkoutOption'
+	},
+	'event':'eecCheckoutOption'		
+ });
+</script>
+
+/* [3] Cart interaction */
+/* [3.1] Add: */
+<script>
+dataLayer.push({
+    'ecommerce': {
+        'add': {
+            'products': [{
+                'name': '', 
+                'id': '',
+                'price': '',
+                'brand': '', 
+                'category': '',
+                'variant': '',
+                'quantity': 1,
+		'print':'',
+		'size':''
+            }]
+        }
+    },
+	'events': {
+		'category':'ecommerce',
+		'action':'addToCart'
+	},
+	'event':'eecAddToCart'	
+});
+</script>
+
+/* [3.2] Remove: */
+<script>
+dataLayer.push({
+    'ecommerce': {
+        'remove': {
+            'products': [{
+                'name': '', 
+                'id': '',
+                'price': '',
+                'brand': '', 
+                'category': '',
+                'variant': '',
+                'quantity': 1,
+		'print':'',
+		'size':''
+            }]
+        }
+    },
+	'events': {
+		'category':'ecommerce',
+		'action':'removeFromCart'
+	},
+	'event':'eecRemoveFromCart'	
+});
+</script>
+
+/* [4] Product Detail view */
+<script>
+dataLayer.push({
+    'ecommerce': {
+        'detail': {
+            'actionField': {
+               '': ''
+            },  
+            'products': [{
+                'name': '', 
+                'id': '',
+                'price': '',
+                'brand': '', 
+                'category': '',
+                'variant': '',
+                'quantity': 1
+            }]
+        }
+    },
+	'events': {
+		'category':'ecommerce',
+		'action':'productDetailView'
+	},
+	'event':'eecProductDetailView'	
+});
+</script>
+
+/* [5] Impressions */
+<script>
+dataLayer.push({
+    'ecommerce': {
+        'impressions': [{
+            'name': '', 
+            'id': '',
+            'price': '',
+            'brand': '', 
+            'category': '',
+            'variant': '',
+            'list': '', 
+            'position': 1
+        },
+        {
+            'name': '',
+            'id': '',
+            'price': '',
+            'brand': '',
+            'category': '',
+            'variant': '',
+            'list': '',
+            'position': 2
+        }]
+    },
+	'events': {
+		'category':'ecommerce',
+		'action':'productImpressions'
+	},
+	'event':'eecImpressions'	
+});
+</script>
+
+/* [6] Product Click */
+<script>
+dataLayer.push({
+    'ecommerce': {
+        'click': {
+            'actionField': {
+				 'list': ''
+			},
+            'products': [{
+				'name': '', 
+				'id': '',
+				'price': '',
+				'brand': '', 
+				'category': '',
+				'variant': '',
+				'position': 1
+            }]
+        }
+    },
+	'events': {
+		'category':'ecommerce',
+		'action':'productClick'
+	},
+	'event':'eecProductClick',	
+    'eventCallback': function() {
+                document.location = destinationUrl;
+    }
+});
+</script>
+
+
+/* [7] Promotion Interactions*/
+/* [7.1] promo view: */
+<script>
+dataLayer.push({
+    'ecommerce': {
+        'promoView': {
+                'promotions': [{                  
+                   'id': '',            
+                   'name': '',
+                   'creative': '',
+				   'position': ''
+			    },
+				{
+				   'id': '',
+				   'name': '',
+				   'creative': '',
+				   'position': ''
+				}]
+        }
+    },
+    'events': {
+		'category':'ecommerce',
+		'action':'promoView'
+	},
+    'event':'eecPromoView'	
+});
+</script>
+
+/* [7.2] promo click*/
+<script>
+dataLayer.push({
+    'ecommerce': {
+        'promoClick': {
+            'promotions': [{
+				   'id': '',                      
+				   'name': '',
+				   'creative': '',
+				   'position': ''
+			}]
+        }
+    },
+	'events': {
+		'category':'ecommerce',
+		'action':'promoClick'
+	},
+	'event':'eecPromoClick',	
+    'eventCallback': function() {
+      document.location = destinationUrl;
+    }
+});
+</script>
+
+/* [8] custom ecommerce action: quote */
+<script>
+dataLayer.push({
+    'ecommerce': {
+        'quote': {  
+            'products': [{
+                'name': '', 
+                'id': '',
+                'price': '',
+                'brand': '', 
+                'category': '',
+                'variant': '',
+                'quantity': 1,
+		'size':'',
+		'print':''
+            }]
+        }
+    },
+	'events': {
+		'category':'<form name>',
+		'action':'submission'
+	},
+	'event':'formSubmission'	
+});
+</script>

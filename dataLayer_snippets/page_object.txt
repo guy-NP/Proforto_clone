@@ -1,1 +1,26 @@
-
+/* [1] Snippet for page and user object data - leave out elements if not applicable to relevant touch point*/
+<script>
+window.dataLayer = [{
+  'page':{
+    'primaryCategory':'',
+    'pageType':'plp',
+    'attributes':[
+     {'name':'',
+      'filter':['','']},
+      {'name':'',
+       'filter':['','']
+       }]
+    },
+  'user':{
+     'userId':'',
+     'consentLevel':'',
+     'loginStatus':''
+  },
+  'forms':{
+    'name':''
+  },
+  'search':{
+    'term':''
+  }  
+}]
+</script>
