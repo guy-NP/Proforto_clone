@@ -14,6 +14,7 @@
  [7.1] promo view
  [7.2] promo click
 [8] custom ecommerce action: quote
+[9] custom ecommerce action: addquote
 */
 
 /* [1] Capture transaction information */
@@ -337,5 +338,31 @@ dataLayer.push({
 		'action':'submission'
 	},
 	'event':'formSubmission'	
+});
+</script>
+
+/* [9] custom ecommerce action: addquote */
+<script>
+dataLayer.push({
+    'ecommerce': {
+        'addquote': {  
+            'products': [{
+                'name': '', 
+                'id': '',
+                'price': '',
+                'brand': '', 
+                'category': '',
+                'variant': '',
+                'quantity': 1,
+		'size':'',
+		'print':''
+            }]
+        }
+    },
+	'events': {
+		'category':'ecommerce',
+		'action':'addToQuote'
+	},
+	'event':'eecAddToQuote'	
 });
 </script>
